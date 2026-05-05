@@ -5,4 +5,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return HttpResponse("Hello, Zolitron 2.")
+
+def data(request):
+    return HttpResponse({"abc": "test"})

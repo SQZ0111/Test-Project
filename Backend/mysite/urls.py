@@ -22,8 +22,13 @@ Including another URLconf
 # ]
 from django.contrib import admin
 from django.urls import include, path
+from django.http import HttpResponse
+
+def home(request):
+    return HttpResponse("This is the home page")
 
 urlpatterns = [
-    path("polls/", include("polls.urls")),
+    path("",home),
     path("admin/", admin.site.urls),
+    path("polls/", include("polls.urls")),
 ]
